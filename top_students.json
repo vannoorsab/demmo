@@ -1,0 +1,32 @@
+[
+  {
+    "name": "hhfhfh",
+    "batch": "2025",
+    "academic": 7,
+    "coreCourses": 8,
+    "hackathons": 7,
+    "papers": 7,
+    "contributions": 7,
+    "score": 7.300000000000001
+  },
+  {
+    "name": "vannorrsab",
+    "batch": "2025",
+    "academic": 2,
+    "coreCourses": 9,
+    "hackathons": 10,
+    "papers": 10,
+    "contributions": 7,
+    "score": 6.2
+  },
+  {
+    "name": "vannnoorsab",
+    "batch": "2025",
+    "academic": 5,
+    "coreCourses": 7,
+    "hackathons": 7,
+    "papers": 6,
+    "contributions": 3,
+    "score": 5.7
+  }
+]

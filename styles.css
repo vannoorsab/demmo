@@ -1,0 +1,206 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Curvy background design */
+body::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background-color: #ff7675;
+    border-radius: 50%;
+    z-index: -1;
+    animation: move 6s infinite ease-in-out;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background-color: #74b9ff;
+    border-radius: 50%;
+    z-index: -1;
+    animation: move 6s infinite ease-in-out alternate;
+}
+
+/* Animating the curvy shapes */
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.15);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.25);
+    transform: scale(1.05);
+}
+
+/* Scrollable Form Wrapper */
+.form-wrapper {
+    max-height: 300px;  /* Limit form height */
+    overflow-y: auto;   /* Enable vertical scroll */
+    margin-bottom: 20px;
+    padding-right: 5px; /* Avoid scrollbar overlap */
+}
+
+/* Custom Scrollbar Styling */
+.form-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-wrapper::-webkit-scrollbar-track {
+    background: #ecf0f1;
+    border-radius: 50px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+    background: #74b9ff;
+    border-radius: 50px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #0984e3;
+}
+
+/* Header Styling */
+h1, h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff7675;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #74b9ff;
+}
+
+/* Input Field Styling */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 2px solid #bdc3c7;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: #ecf0f1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff7675;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #74b9ff;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0984e3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
+
+/* Hide elements initially */
+.hidden {
+    display: none;
+}
+
+/* Styling for buttons under success message */
+#successMessage button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Scroll Button Styling */
+button#scrollToAllData, button#scrollToTop3 {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ffeaa7; /* Light yellow */
+    color: #2d3436;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#scrollToAllData:hover, button#scrollToTop3:hover {
+    background-color: #fdcb6e; /* Darker yellow on hover */
+}

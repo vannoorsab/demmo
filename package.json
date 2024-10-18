@@ -1,0 +1,17 @@
+{
+    "name": "student-recognition-app",
+    "version": "1.0.0",
+    "description": "Desktop app for recognizing top-performing students",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "Your Name",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^25.9.8"
+    },
+    "dependencies": {
+        "sqlite3": "^5.1.7"
+    }
+}
